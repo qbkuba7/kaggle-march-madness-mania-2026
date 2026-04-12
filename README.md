@@ -33,12 +33,7 @@ The submissions are evaluated using the **Brier Score**, which heavily penalizes
 Although we were quite confident with adding betting odds to our model, we couldn't be entirely sure if it would actually improve our final score. To minimize the risk, we decided to send two final submissions: one incorporating the odds, and a 'clean' baseline model without them.
 Here is how they performed in the final standings:
 
-| Submission | Rank | Percentile | Leaderboard |
+| Submission | Rank | Percentile |
 | :--- | :--- | :--- | :--- |
-| **Model 1 (with betting odds)** | **289 / 3462** | **Top 9%** 🥉 | Private |
-| **Model 2 (base model)** | 450 / 3462 | Top 13% | Private |
-
-## 🚀 How to Run
-1. Clone this repository: 
-   ```bash
-   git clone [https://github.com/TWOJ_LOGIN/TWOJE_REPOZYTORIUM.git](https://github.com/TWOJ_LOGIN/TWOJE_REPOZYTORIUM.git)
+| **Model 1 (with betting odds)** | **289 / 3462** | **Top 9%** 🥉 |
+| **Model 2 (base model)** | 450 / 3462 | Top 13% |
