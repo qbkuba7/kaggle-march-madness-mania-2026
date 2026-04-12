@@ -18,7 +18,7 @@ This repository contains our solution for the **Kaggle March Machine Learning Ma
 The solution is organized in two main Jupyter notebooks:
 
 * **`notebook_1_kaggle.ipynb`**: TODO...
-* **`notebook_2_kaggle.ipynb`**: The core of the solution. It covers chosen models training (ElasticNet & HistGradientBoosting), hyperparameter tuning, and the logic for blending model predictions with external betting market data.
+* **`notebook_2_kaggle.ipynb`**: The core of the solution. It contains chosen models training (ElasticNet & HistGradientBoosting), hyperparameter tuning, and the logic for blending model predictions with external betting market data.
 
 ## 🏀 Competition Introduction
 The goal of the Kaggle March Madness competition is to forecast the outcomes of all possible matchups in the NCAA Division I Basketball Championships. Instead of simply predicting the winner, participants are required to submit the *probability* of one team beating another. 
