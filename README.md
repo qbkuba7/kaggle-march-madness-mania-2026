@@ -9,7 +9,7 @@
 
 ## 👥 Authors
 * [Jakub Miszczak](https://github.com/qbkuba7)
-* [Kacper Tomczyk](https://github.com/ktomczyk)
+* [Kacper Tomczyk](https://github.com/kacpert20)
 
 ## 📌 Short Description
 This repository contains our solution for the **Kaggle March Machine Learning Mania 2026** competition. Our primary model achieved a rank of **289 out of 3462** teams, placing us in the **Top 9%** (Bronze Medal zone) of the final leaderboard.
