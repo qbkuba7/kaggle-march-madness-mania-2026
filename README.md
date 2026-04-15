@@ -17,7 +17,7 @@ This repository contains our solution for the **Kaggle March Machine Learning Ma
 ## 📂 Project Structure
 The solution is organized in two main Jupyter notebooks:
 
-* **`notebook_1_kaggle.ipynb`**: TODO...
+* **`notebook_1_kaggle.ipynb`**: Data processing and comprehensive feature engineering. Here, we transform raw Kaggle NCAA data into a robust dataset by calculating advanced efficiency metrics, building team-season portfolios, and creating matchup-specific relative features (`Diff_*`) that serve as the foundation for our models.
 * **`notebook_2_kaggle.ipynb`**: The core of the solution. It contains chosen models training (ElasticNet & HistGradientBoosting), hyperparameter tuning, and the logic for blending model predictions with external betting market data.
 
 ## 🏀 Competition Introduction
@@ -30,7 +30,12 @@ The submissions are evaluated using the **Brier Score**, which heavily penalizes
 
 ### Data Preprocessing & Feature Engineering
 We separated training processes for the Men's and Women's tournaments to account for different dataset characteristics. This was the only logical approach, as men's and women's basketball are completely different so different stats carry different weights, and separate models allow for capturing these unique dynamics, which led us to better results.
-#### TODO...
+To create a robust dataset, we implemented a comprehensive feature engineering pipeline. Instead of relying on raw, simple statistics, we focused on pace-adjusted efficiency and relative strength:
+
+* **Advanced Basketball Metrics:** We transformed raw box score data into advanced metrics such as **Possessions**, **Offensive/Defensive Ratings**, **Net Rating**, **Effective Field Goal Percentage (eFG%)**, and **Turnover Percentage**. This allowed us to evaluate true team efficiency regardless of the game's pace.
+* **Team Portfolios & Recent Form:** For every team, we aggregated their performance across the entire season. Crucially, we also isolated their statistics from the **last 5 and 10 games** (e.g., `Last10NetRtgAvg`, `Last5WinPct`) to capture late-season momentum and current form entering the tournament.
+* **Matchup Differentials (`Diff_*`):** Since our model predicts head-to-head matchups, feeding it isolated team stats is sub-optimal. We engineered relative features computing the exact difference between Team A and Team B for all key metrics (e.g., `Diff_NetRtgAvg`, `Diff_SeedNum`). This relative strength indicator proved to be the most vital component of our models.
+* **Rankings & Seeds Integration:** We incorporated official tournament seeds and Massey Ordinals (consensus computer rankings), creating categorical similarities (`Same_ConfAbbrev`) and numerical differentials to reflect the perceived strength gap and scheduling difficulty between opponents.
 
 
 ### 🧠 Optimized Modeling Strategy
